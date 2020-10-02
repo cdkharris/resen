@@ -233,7 +233,7 @@ export bucket_name: Export bucket to a sharable *.tar file."""
             return
         else:
             try:
-                print('Exporting bucket %s.  This will take several mintues.' % bucket_name)
+                print('Exporting bucket %s.  This will take several minutes.' % bucket_name)
                 self.program.export_bucket(bucket_name, file_name, exclude_mounts=exclude_list, img_repo=img_name, img_tag=img_tag)
             except (ValueError, RuntimeError) as e:
                 print(e)
@@ -299,7 +299,7 @@ import : Import a bucket from a .tgz file by providing input."""
         start = self.get_yn(msg) == 'y'
 
         try:
-            print('Importing bucket %s.  This may take several mintues.' % bucket_name)
+            print('Importing bucket %s.  This may take several minutes.' % bucket_name)
             print("...extracting bucket...")
             self.program.import_bucket(bucket_name,file_name,extract_dir=extract_dir,
                                        img_repo=img_name,img_tag=img_tag,remove_image_file=True)
